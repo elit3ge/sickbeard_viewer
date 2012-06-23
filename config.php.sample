@@ -1,0 +1,14 @@
+<?php
+
+// sickbeard settings
+$ip = "website or ip:port";
+$api = "1234";
+
+// sabnzbd settings
+$sab_ip = "website or ip:port";
+$sab_api = "1234";
+
+// site name
+$site_name = "Site Name";
+
+?>
