@@ -22,7 +22,7 @@ foreach($sbJSON->{data} as $show) {
         $newDate = date("l, j F Y g:ia", strtotime($show->{date}));
 
         // Show Details
-        echo "<a href='seasonlist.php?showid=".$show->{tvdbid}."'>" . $show->{show_name} . "</a>, S" . $show->{season} . " E" . $show->{episode} . " | " .$newDate . "<br />";
+        echo "<a href='epdata.php?showid=".$show->{tvdbid}."&seasonid=".$show->{season}."&ep=".$show->{episode}."'>" . $show->{show_name} . ", S" . $show->{season} . " E" . $show->{episode} . "</a> | " .$newDate . "<br />";
 }
 include 'footer.php';
 echo "</center>";
