@@ -55,6 +55,6 @@ printf("<img src=http://".$ip."/api/".$api."/?cmd=show.getbanner&tvdbid=".$showi
         {
         	echo "<font color='#F62817'>Status: Not Collected </font><br /><br />";
         }
-        
+include 'footer.php';        
 echo "</center>";
 ?>

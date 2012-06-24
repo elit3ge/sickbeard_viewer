@@ -61,5 +61,6 @@ foreach($sbJSON->{data} as $show) {
 
         $counter = $counter + "1";
     }
+include 'footer.php';
 echo "</center>";
 ?>
