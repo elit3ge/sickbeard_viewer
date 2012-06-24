@@ -21,7 +21,7 @@ foreach($sbJSON2->{data}->{today} as $show2) {
         $newDate2 = date("l, j F Y", strtotime($show2->{airdate}));
 
         // Show Details
-        echo "<font color='#306EFF'>" . $show2->{show_name} . ", S" . $show2->{season} . " E" . $show2->{episode} . " | " .$newDate2 . "</font><br />";
+        echo "<font color='#306EFF'><a href='seasonlist.php?showid=".$show2->{tvdbid}."'>" . $show2->{show_name} . "</a>, S" . $show2->{season} . " E" . $show2->{episode} . " | " .$newDate2 . "</font><br />";
 }
 
 foreach($sbJSON->{data}->{soon} as $show) {
@@ -31,7 +31,7 @@ foreach($sbJSON->{data}->{soon} as $show) {
         $newDate = date("l, j F Y", strtotime($show->{airdate}));
 
         // Show Details
-        echo $show->{show_name} . ", S" . $show->{season} . " E" . $show->{episode} . " | " .$newDate . "<br />";
+        echo "<a href='seasonlist.php?showid=".$show->{tvdbid}."'>".$show->{show_name} . "</a>, S" . $show->{season} . " E" . $show->{episode} . " | " .$newDate . "<br />";
 }
 
 ?>
