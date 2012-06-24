@@ -2,11 +2,16 @@
 
 // Settings
 include 'config.php';
+include 'header.php';
+echo "<title>Download Queue | ".$site_name."</title>";
 
 // Feed URL
 $feed = "http://".$sab_ip."/api?mode=qstatus&output=json&apikey=".$sab_api;
     
 $sbJSON = json_decode(file_get_contents($feed));
+
+if($sab_enabled == "1")
+{
 
 // What are you!?
 echo "<h1>Download Queue</h1>";
@@ -37,5 +42,10 @@ foreach($sbJSON->{jobs} as $job) {
 else
 {
 	echo "Queue is Empty!";
+}
+}
+else
+{
+	echo "<br><center>Module is disabled!</center>";
 }
 ?>
