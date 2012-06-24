@@ -8,9 +8,9 @@ $showid = $_GET['showid'];
 $seasonid = $_GET['seasonid'];
 $epid = $_GET['ep'];
 
-// Check if username is available, set URL
-    $feed = "http://".$ip."/api/".$api."/?cmd=episode&tvdbid=".$showid."&season=".$seasonid."&episode=".$epid;
-    $feed2 = "http://".$ip."/api/".$api."/?cmd=show&tvdbid=".$showid;
+// Define feeds
+$feed = "http://".$ip."/api/".$api."/?cmd=episode&tvdbid=".$showid."&season=".$seasonid."&episode=".$epid;
+$feed2 = "http://".$ip."/api/".$api."/?cmd=show&tvdbid=".$showid;
     
 $sbJSON = json_decode(file_get_contents($feed));
 $tvdata = json_decode(file_get_contents($feed2));
@@ -20,6 +20,7 @@ $title = $tvdata->{data}->{show_name};
 
 //Display Browser Title
 echo "<title>".$title." | Season ".$seasonid." | Episode ".$epid." | ".$site_name."</title>";
+echo "<center>";
 
 // What are you!?
 echo "<h1>".$title." S".$seasonid."E".$epid."</h1>";
@@ -27,9 +28,6 @@ echo "<a href='episode.php?showid=".$showid."&seasonid=".$seasonid."'>Back</a><b
 
 // Display Show Bannger
 printf("<img src=http://".$ip."/api/".$api."/?cmd=show.getbanner&tvdbid=".$showid."><br><br>");
-
-// Run through each feed item
-//foreach($sbJSON as $show) {
 
         // Show Details
         echo "Episode: " . $epid . "</a><br /><br>";
@@ -43,7 +41,7 @@ printf("<img src=http://".$ip."/api/".$api."/?cmd=show.getbanner&tvdbid=".$showi
         }
         elseif ($sbJSON->{data}->{status} == "Snatched")
         {
-        	echo "<font color='#41A317'>Status: Collected </font><br /><br />";
+        	echo "<font color='#41A317'>Status: Downloading... </font><br /><br />";
         }
         elseif ($sbJSON->{data}->{status} == "Downloaded")
         {
@@ -57,6 +55,6 @@ printf("<img src=http://".$ip."/api/".$api."/?cmd=show.getbanner&tvdbid=".$showi
         {
         	echo "<font color='#F62817'>Status: Not Collected </font><br /><br />";
         }
-//    }
-
+        
+echo "</center>";
 ?>

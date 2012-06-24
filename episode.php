@@ -19,6 +19,7 @@ $title = $tvdata->{data}->{show_name};
 
 //Display Browser Title
 echo "<title>".$title." | Season ".$seasonid." | ".$site_name."</title>";
+echo "<center>";
 
 // What are you!?
 echo "<h1>".$title." Season ".$seasonid." Episodes</h1>";
@@ -43,7 +44,7 @@ foreach($sbJSON->{data} as $show) {
         }
         elseif ($show->{status} == "Snatched")
         {
-        	echo "<font color='#41A317'>Status: Collected </font><br /><br />";
+        	echo "<font color='#41A317'>Status: Downloading... </font><br /><br />";
         }
         elseif ($show->{status} == "Downloaded")
         {
@@ -60,5 +61,5 @@ foreach($sbJSON->{data} as $show) {
 
         $counter = $counter + "1";
     }
-
+echo "</center>";
 ?>
