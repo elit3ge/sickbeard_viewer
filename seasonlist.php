@@ -11,18 +11,18 @@ $showid = $_GET['showid'];
     $feed = "http://".$ip."/api/".$api."/?cmd=show.seasonlist&tvdbid=".$showid."&sort=asc";
     $feed2 = "http://".$ip."/api/".$api."/?cmd=show&tvdbid=".$showid;
     $feed3 = "http://api.trakt.tv/show/episode/summary.json/".$trakt_api."/".$showid."/1/1";
-    
-$sbJSON = json_decode(file_get_contents($feed));
-$tvdata = json_decode(file_get_contents($feed2));
 
 // fetch trakt api
 if ($trakt_enabled == "1")
 {
+	$sbJSON = json_decode(file_get_contents($feed));
+	$tvdata = json_decode(file_get_contents($feed2));
 	$trakt = json_decode(file_get_contents($feed3));
 }
 else
 {
-	echo "";
+	$sbJSON = json_decode(file_get_contents($feed));
+	$tvdata = json_decode(file_get_contents($feed2));
 }
 
 // Grab Show Title

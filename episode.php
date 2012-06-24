@@ -10,9 +10,20 @@ $seasonid = $_GET['seasonid'];
 // Check if username is available, set URL
     $feed = "http://".$ip."/api/".$api."/?cmd=show.seasons&tvdbid=".$showid."&season=".$seasonid;
     $feed2 = "http://".$ip."/api/".$api."/?cmd=show&tvdbid=".$showid;
+    $feed3 = "http://api.trakt.tv/show/episode/summary.json/".$trakt_api."/".$showid."/1/1";
     
-$sbJSON = json_decode(file_get_contents($feed));
-$tvdata = json_decode(file_get_contents($feed2));
+// fetch trakt api
+if ($trakt_enabled == "1")
+{
+	$sbJSON = json_decode(file_get_contents($feed));
+	$tvdata = json_decode(file_get_contents($feed2));
+	$trakt = json_decode(file_get_contents($feed3));
+}
+else
+{
+	$sbJSON = json_decode(file_get_contents($feed));
+	$tvdata = json_decode(file_get_contents($feed2));
+}
 
 // Grab Show Title
 $title = $tvdata->{data}->{show_name};
@@ -25,8 +36,16 @@ echo "<center>";
 echo "<h1>".$title." Season ".$seasonid."</h1>";
 echo "<a href='seasonlist.php?showid=".$showid."'>Back</a><br>";
 
-// Display Show Bannger
-printf("<img src=http://".$ip."/api/".$api."/?cmd=show.getbanner&tvdbid=".$showid."><br><br>");
+// trakt.tv banner intragration
+if ($trakt_enabled == "1")
+{
+	printf("<img src=".$trakt->{show}->{images}->{banner}."><br><br>");
+}
+else
+{
+	// Display Show Bannger
+	printf("<img src=http://".$ip."/api/".$api."/?cmd=show.getbanner&tvdbid=".$showid."><br><br>");
+}
 
 // Define episode counter
 $counter = "1";
