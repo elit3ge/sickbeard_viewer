@@ -14,7 +14,7 @@ $sbJSON2 = json_decode(file_get_contents($feed2));
 echo "<h1>Airing Soon</h1>";
 
 // Run through each feed item
-echo "Today<br>";
+echo "<u>Today</u><br>";
 foreach($sbJSON2->{data}->{today} as $show2) {
     // Only grab shows of episode 1
 
@@ -25,7 +25,7 @@ foreach($sbJSON2->{data}->{today} as $show2) {
         echo "<a href='seasonlist.php?showid=".$show2->{tvdbid}."'>" . $show2->{show_name} . "</a>, S" . $show2->{season} . " E" . $show2->{episode} . " | " .$newDate2 . "<br />";
 }
 
-echo "<br>Later<br>";
+echo "<br><u>Later</u><br>";
 foreach($sbJSON->{data}->{soon} as $show) {
     // Only grab shows of episode 1
 
