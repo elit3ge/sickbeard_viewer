@@ -4,10 +4,15 @@
 $ip = "website or ip:port";
 $api = "1234";
 
-// sabnzbd settings
-$sab_enabled = "1"; //Change the value from 1 to 0 to disable sabnzbd
+// sabnzbd settings -- Optional
+$sab_enabled = "0"; //Change the value from 0 to 1 to enable sabnzbd
 $sab_ip = "website or ip:port";
 $sab_api = "1234";
+
+// trakt.tv settings -- Optional
+// Used to grab alternate images and show info
+$trakt_enabled = "0"; //Change the value from 0 to 1 to enable trakt
+$trakt_api = "1234";
 
 // site name
 $site_name = "Site Name";
