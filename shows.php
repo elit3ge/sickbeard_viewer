@@ -19,5 +19,6 @@ include 'header.php';
 	}
 
 echo "<br>Eps Downloaded: ".$stats->{data}->{ep_downloaded}." of ".$stats->{data}->{ep_total}." == Shows Active: ".$stats->{data}->{shows_active}." of ".$stats->{data}->{shows_total};
+include 'footer.php';
 ?>
 </center>

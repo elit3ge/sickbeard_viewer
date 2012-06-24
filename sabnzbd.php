@@ -49,5 +49,6 @@ else
 {
 	echo "<br><center>Module is disabled!</center>";
 }
+include 'footer.php';
 ?>
 </center>

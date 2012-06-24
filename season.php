@@ -27,5 +27,6 @@ foreach($sbJSON->{data}->{later} as $show) {
         echo $show->{show_name} . ", Season " . $show->{season} . " | " .$newDate . "<br />";
     }
 }
+include 'footer.php';
 echo "</center>";
 ?>
