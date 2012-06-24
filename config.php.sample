@@ -5,6 +5,7 @@ $ip = "website or ip:port";
 $api = "1234";
 
 // sabnzbd settings
+$sab_enabled = "1"; //Change the value from 1 to 0 to disable sabnzbd
 $sab_ip = "website or ip:port";
 $sab_api = "1234";
 

@@ -5,8 +5,6 @@ echo "<title>Airing Soon | ".$site_name."</title>";
 echo "<center>";
 include 'header.php';
 include 'soon.php';
-include 'sabnzbd.php';
-
 echo "</center>";
 
 ?>
