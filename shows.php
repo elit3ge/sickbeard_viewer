@@ -6,15 +6,16 @@ echo "<title>TV Shows | ".$site_name."</title>";
 
 include 'header.php';
 
-	$feed = "http://".$ip."/api/".$api."/?cmd=shows&sort=name&paused=0";
-	$feed2 = "http://".$ip."/api/".$api."/?cmd=shows.stats";
+$feed = "http://".$ip."/api/".$api."/?cmd=shows&sort=name&paused=0";
+$feed2 = "http://".$ip."/api/".$api."/?cmd=shows.stats";
         
-	$sbJSON = json_decode(file_get_contents($feed),true);
-	$stats = json_decode(file_get_contents($feed2));
+$sbJSON = json_decode(file_get_contents($feed),true);
+$stats = json_decode(file_get_contents($feed2));
 	
-	echo "<h1>Shows</h1>";
+echo "<h1>Shows</h1>";
 
-	foreach ($sbJSON['data'] as $key => $values){
+foreach ($sbJSON['data'] as $key => $values)
+	{
     	echo '<a href="seasonlist.php?showid=' . $values['tvdbid'] . '">' . $key . '</a><br />';
 	}
 

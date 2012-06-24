@@ -1,11 +1,10 @@
-<center>
 <?php
 
 // Settings
 include 'config.php';
 include 'header.php';
 echo "<title>Download Queue | ".$site_name."</title>";
-
+echo "<center>";
 // Feed URL
 $feed = "http://".$sab_ip."/api?mode=qstatus&output=json&apikey=".$sab_api;
     
@@ -47,8 +46,8 @@ else
 }
 else
 {
-	echo "<br><center>Module is disabled!</center>";
+	echo "<br>Module is disabled!";
 }
 include 'footer.php';
+echo "</center>";
 ?>
-</center>

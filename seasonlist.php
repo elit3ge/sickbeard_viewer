@@ -59,13 +59,13 @@ else
 {
 // Fix Next Ep
 if ($tvdata->{data}->{next_ep_airdate} == "")
-{
-	$next_ep = "N/A";
-}
+	{
+		$next_ep = "N/A";
+	}
 else
-{
-	$next_ep = $tvdata->{data}->{next_ep_airdate};
-}
+	{
+		$next_ep = $tvdata->{data}->{next_ep_airdate};
+	}
 // Show Details
 echo "Network: ".$tvdata->{data}->{network}.", Airs: ".$tvdata->{data}->{airs}.", Next Ep: ".$next_ep.", Show Status: ".$tvdata->{data}->{status}."<br><br>";
 }

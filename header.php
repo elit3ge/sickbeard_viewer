@@ -1,7 +1,5 @@
 <?php
 
-
-
 echo "<center>";
 echo "<h1>".$site_name."'s Collection</h1>";
 

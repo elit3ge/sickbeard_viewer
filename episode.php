@@ -54,28 +54,28 @@ $counter = "1";
 foreach($sbJSON->{data} as $show) {
 
         // Show Details
-        echo "<a href='epdata.php?showid=".$showid."&seasonid=".$seasonid."&ep=".$counter."'>Episode: " . $counter . "</a><br />";
-        echo "Name: " . $show->{name} . "<br />";
-        echo "Aired: " . $show->{airdate} . "<br />";
+        echo "<a href='epdata.php?showid=".$showid."&seasonid=".$seasonid."&ep=".$counter."'><b>Episode:</b> " . $counter . "</a><br />";
+        echo "<b>Name:</b> " . $show->{name} . "<br />";
+        echo "<b>Aired:</b> " . $show->{airdate} . "<br />";
         if ($show->{status} == "Archived")
         {
-        	echo "<font color='#41A317'>Status: Collected </font><br /><br />";
+        	echo "<font color='#41A317'><b>Status:</b> Collected </font><br /><br />";
         }
         elseif ($show->{status} == "Snatched")
         {
-        	echo "<font color='#41A317'>Status: Downloading... </font><br /><br />";
+        	echo "<font color='#41A317'><b>Status:</b> Downloading... </font><br /><br />";
         }
         elseif ($show->{status} == "Downloaded")
         {
-        	echo "<font color='#41A317'>Status: Collected </font><br /><br />";
+        	echo "<font color='#41A317'><b>Status:</b> Collected </font><br /><br />";
         }
         elseif ($show->{status} == "Wanted")
         {
-        	echo "<font color='#306EFF'>Status: Wanted </font><br /><br />";
+        	echo "<font color='#306EFF'><b>Status:</b> Wanted </font><br /><br />";
         }
         else
         {
-        	echo "<font color='#F62817'>Status: Not Collected </font><br /><br />";
+        	echo "<font color='#F62817'><b>Status:</b> Not Collected </font><br /><br />";
         }
 
         $counter = $counter + "1";

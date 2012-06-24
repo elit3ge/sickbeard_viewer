@@ -6,7 +6,7 @@ echo "<title>New Seasons | ".$site_name."</title>";
 
 // Check if username is available, set URL
 // This probably isn't necessary
-    $feed = "http://".$ip."/api/".$api."/?cmd=future&sort=date&type=later";
+$feed = "http://".$ip."/api/".$api."/?cmd=future&sort=date&type=later";
     
 $sbJSON = json_decode(file_get_contents($feed));
 
