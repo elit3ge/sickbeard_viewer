@@ -19,7 +19,7 @@ $title = $tvdata->{data}->{show_name};
 
 //Display Browser Title
 echo "<title>".$title." | ".$site_name."</title>";
-
+echo "<center>";
 // What are you!?
 echo "<h1>".$title." Seasons</h1>";
 echo "<a href='shows.php'>Back</a><br><br>";
@@ -51,5 +51,5 @@ else
 }
 // Show Details
 echo "<br>Network: ".$tvdata->{data}->{network}.", Airs: ".$tvdata->{data}->{airs}.", Next Ep: ".$next_ep.", Show Status: ".$tvdata->{data}->{status};
-
+echo "</center>";
 ?>

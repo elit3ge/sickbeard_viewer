@@ -1,3 +1,4 @@
+<center>
 <?php
 
 // Settings
@@ -49,3 +50,4 @@ else
 	echo "<br><center>Module is disabled!</center>";
 }
 ?>
+</center>
