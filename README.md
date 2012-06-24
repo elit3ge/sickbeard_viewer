@@ -1,4 +1,4 @@
-sickbeard_viewer
+Sickbeard Viewer
 ================
 
 PHP website to share your shows and episodes with friends and family.
@@ -8,3 +8,5 @@ PHP website to share your shows and episodes with friends and family.
 3. Open config.php and change the settings to your own.
 
 Now your ready to go! Just navigate your browser to the location you placed your files.
+
+#Note: For this to work properly outside your network, you must forward your sickbeard and sabnzbd ports.
