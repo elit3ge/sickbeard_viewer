@@ -14,7 +14,7 @@ $sbJSON2 = json_decode(file_get_contents($feed2));
 echo "<h1>Airing Soon</h1>";
 
 // Remove Today header if no shows
-if ($sbJSON->{data}->{today} == "")
+if ($sbJSON2->{data}->{today} == "")
 { }
 else
 {
