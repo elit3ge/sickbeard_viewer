@@ -9,6 +9,7 @@ $epid = $_GET['epid'];
 
 $url = "http://".$plex_ip."/library/metadata/".$epid."/children";
 $achxml = simplexml_load_file($url);
+echo "<title>".$achxml['title1']." | ".$achxml['title2']." | ".$site_name."</title>";
 echo "<h1>".$achxml['title1']." | ".$achxml['title2']."</h1>";
 foreach($achxml AS $child) {
 	//echo "<h1>".$child['title']."</h1>";
