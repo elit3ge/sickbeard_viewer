@@ -9,15 +9,13 @@ $showkey = $_GET['key'];
 
 $url = "http://".$plex_ip."/library/metadata/".$showkey."/children";
 $achxml = simplexml_load_file($url);
+echo "<title>".$achxml['title2']." | ".$site_name."</title>";
+echo "<h1>".$achxml['title2']."</h1>";
 foreach($achxml AS $child) {
-	//echo "<h1>".$child['title']."</h1>";
-	echo "<a href='plex-shows-eps.php?epid=".$child['ratingKey']."'>".$child['title']."</a><br>";
-    //echo "<b>Year:</b> ".$child['year']." - <b>Views:</b> ".$child['viewCount']."<br>";
-    //echo "<b>Summary:</b> ".$child['summary']."<br>";
-    //echo "<b>Studio:</b> ".$child['studio']."<br>";
-    //echo "<b>File Location:</b> ".$child->Media->Part['file']."<br><br>";
-   	//printf("<img src=http://".$plex_ip.$child['thumb'].">");
-
+	if ($child['title'] == "All episodes")
+	{ echo "<a href='plex-shows-eps.php?epid=".$showkey."/allLeaves'>".$child['title']."</a><br>";	}
+	else
+	{ echo "<a href='plex-shows-eps.php?epid=".$child['ratingKey']."'>".$child['title']."</a><br>"; }
 }
 
 include 'footer.php';
