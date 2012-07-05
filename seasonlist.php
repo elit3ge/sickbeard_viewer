@@ -17,6 +17,7 @@ if ($trakt_enabled == "1")
 {
 	$sbJSON = json_decode(file_get_contents($feed));
 	$tvdata = json_decode(file_get_contents($feed2));
+	
 	$trakt = json_decode(file_get_contents($feed3));
 }
 else
@@ -38,11 +39,20 @@ echo "<a href='shows.php'>Back</a><br>";
 // trakt.tv banner intragration
 if ($trakt_enabled == "1")
 {
-	printf("<img src=".$trakt->{show}->{images}->{banner}."><br><br>");
+	if ($trakt->{status} == "failure")
+	{
+		// Display SickBeard Banner as trakt returned an error
+		printf("<img src=http://".$ip."/api/".$api."/?cmd=show.getbanner&tvdbid=".$showid."><br><br>");
+	}
+	else
+	{
+		// Display trakt.tv Bannger
+		printf("<img src=".$trakt->{show}->{images}->{banner}."><br><br>");
+	}
 }
 else
 {
-	// Display Show Bannger
+	// Display SickBeard Bannger
 	printf("<img src=http://".$ip."/api/".$api."/?cmd=show.getbanner&tvdbid=".$showid."><br><br>");
 }
 
@@ -52,8 +62,6 @@ if ($trakt_enabled == "1")
 	echo "<b>Network:</b> ".$trakt->{show}->{network}." | <b>Run Time:</b> ".$trakt->{show}->{runtime}." Mins<br>";
 	echo "<b>Runs:</b> ".$trakt->{show}->{air_day}.", ".$trakt->{show}->{air_time}."<br>";
 	echo "<b>Overview:</b> ".$trakt->{show}->{overview}."<br><br>";
-
-
 }
 else
 {
@@ -84,5 +92,4 @@ foreach($sbJSON->{data} as $show) {
         }
     }
 include 'footer.php';
-echo "</center>";
 ?>

@@ -6,4 +6,6 @@ echo "Copyright (C) ".date(Y)." - ".$site_name." | <a href='http://github.com/el
 echo "Version: ".$version;
 // close css
 echo "</div>";
+//close center
+echo "</center>";
 ?>

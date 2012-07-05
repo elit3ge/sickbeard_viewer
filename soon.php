@@ -10,6 +10,10 @@ $feed2 = "http://".$ip."/api/".$api."/?cmd=future&sort=date&type=today|missed";
 $sbJSON = json_decode(file_get_contents($feed));
 $sbJSON2 = json_decode(file_get_contents($feed2));
 
+// styling
+echo "<link rel='stylesheet' type='text/css' href='style.css' />";
+echo "<div id='site_content'>";
+
 // What are you!?
 echo "<h1>Airing Soon</h1>";
 
@@ -59,5 +63,5 @@ $newDate3 = date("l, j F Y", strtotime($show3->{airdate}));
 // Show Details
 echo "<a href='seasonlist.php?showid=".$show2->{tvdbid}."'>" . $show3->{show_name} . "</a>, S" . $show3->{season} . " E" . $show3->{episode} . " | " .$newDate3 . "<br />";
 }
-
+echo "</div>";
 ?>
