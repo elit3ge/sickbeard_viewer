@@ -23,15 +23,6 @@ foreach($achxml AS $child) {
 	echo "<b>File:</b> ".$child->Media->Part['file']."<br>";
 	echo "<b>Bitrate:</b> ".$child->Media['bitrate']." | <b>Width:</b> ".$child->Media['width']." | <b>Height:</b> ".$child->Media['height']." | <b>AudioChannels:</b> ".$child->Media['audioChannels']." | <b>AudioCodec:</b> ".$child->Media['audioCodec']." | <b>VideoCodec:</b> ".$child->Media['videoCodec']." | <b>VideoResolution:</b> ".$child->Media['videoResolution']." | <b>VideoFrameRate:</b> ".$child->Media['videoFrameRate']."<br><br>";
 	printf("<img src=http://".$plex_ip.$child['thumb'].">");
-
-
-
-
-    //echo "<b>Year:</b> ".$child['year']." - <b>Views:</b> ".$child['viewCount']."<br>";
-    //echo "<b>Summary:</b> ".$child['summary']."<br>";
-    //echo "<b>Studio:</b> ".$child['studio']."<br>";
-    //echo "<b>File Location:</b> ".$child->Media->Part['file']."<br><br>";
-   	//printf("<img src=http://".$plex_ip.$child['thumb'].">");
 	echo "<br><br>";
 }
 
