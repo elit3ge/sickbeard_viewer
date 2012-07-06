@@ -26,27 +26,27 @@ else
 {
 	echo "Downloads Paused: ".$sbJSON->{paused}."<br />";
 }
-echo "Queued: ".$sbJSON->{mb}." MB<br />";
-echo "Speed: ".$sbJSON->{kbpersec}." Kbps<br />";
-echo "Jobs:<br>";
+echo "<b>Queued:</b> ".$sbJSON->{mb}." MB<br />";
+echo "<b>Speed:</b> ".$sbJSON->{kbpersec}." Kbps<br /><br>";
+echo "<b>Jobs:</b><br>";
 
 foreach($sbJSON->{jobs} as $job) {
 
         // Show Details
-        echo "Filename: ".$job->{filename}."<br>";
-        echo "Size: ".$job->{mb}."<br>";
-        echo "Size Left: ".$job->{mbleft}."<br><br>";
+        echo "<b>Filename:</b> ".$job->{filename}."<br>";
+        echo "<b>Size:</b> ".$job->{mb}."<br>";
+        echo "<b>Size Left:</b> ".$job->{mbleft}."<br><br>";
         
 }
 }
 else
 {
-	echo "Queue is Empty!";
+	echo "<b>Queue is Empty!</b>";
 }
 }
 else
 {
-	echo "<br>Module is disabled!";
+	echo "<br><b>Module is disabled!</b>";
 }
 include 'footer.php';
 echo "</center>";
