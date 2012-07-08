@@ -13,8 +13,6 @@ echo "<a href='index.php'>Airing Soon</a> | <a href='shows.php'>Shows</a> | <a h
 
 if ($sab_enabled == "1") { echo " | <a href='sabnzbd.php'>Download Queue</a>"; } else {}
 if ($plex_enabled == "1") { echo " | <a href='plex-movies.php'>Plex</a>"; } else {}
-
-
-
+if ($headphones_enabled == "1") { echo " | <a href='headphones.php'>Headphones</a>"; } else {}
 
 ?>
