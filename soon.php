@@ -22,7 +22,7 @@ if ($sbJSON2->{data}->{today} == "")
 { }
 else
 {
-echo "<u>Today</u><br>";
+echo "<u><b>Today</b></u><br>";
 }
 
 // Run through each feed item
@@ -35,7 +35,7 @@ $newDate2 = date("l, j F Y", strtotime($show2->{airdate}));
 echo "<a href='seasonlist.php?showid=".$show2->{tvdbid}."'>" . $show2->{show_name} . "</a>, S" . $show2->{season} . " E" . $show2->{episode} . " | " .$newDate2 . "<br />";
 }
 
-echo "<br><u>Later</u><br>";
+echo "<br><b><u>Later</u></b><br>";
 foreach($sbJSON->{data}->{soon} as $show) {
 // Only grab shows of episode 1
 
@@ -51,7 +51,7 @@ if ($sbJSON->{data}->{missed} == "")
 { }
 else
 {
-echo "<br><u>Missed</u><br>";
+echo "<br><u><b>Missed</b></u><br>";
 }
 
 // Run through each feed item
