@@ -61,6 +61,7 @@ else
         	echo "";
         }
         echo "<b>Description:</b> " . $sbJSON->{data}->{description} . "<br><br>";
+        echo "<b>Size:</b> " . $sbJSON->{data}->{file_size_human} . "<br />";
         echo "<b>Aired:</b> " . $sbJSON->{data}->{airdate} . "<br />";
         echo "<b>Quality:</b> " . $sbJSON->{data}->{quality} . "<br />";
         if ($sbJSON->{data}->{status} == "Archived")
