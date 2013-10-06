@@ -1,6 +1,6 @@
 <?php
 include 'config.php';
-echo "<title>Airing Soon | ".$site_name."</title>";
+echo "<title>Coming Soon | ".$site_name."</title>";
 
 echo "<center>";
 	include 'header.php';

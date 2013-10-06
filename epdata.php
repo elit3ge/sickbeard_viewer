@@ -65,23 +65,27 @@ else
         echo "<b>Quality:</b> " . $sbJSON->{data}->{quality} . "<br />";
         if ($sbJSON->{data}->{status} == "Archived")
         {
-        	echo "<font color='#41A317'><b>Status:</b> Collected </font><br /><br />";
+        	echo "<font color='#41A317'><b>Status:</b> Archived </font><br /><br />";
         }
         elseif ($sbJSON->{data}->{status} == "Snatched")
         {
-        	echo "<font color='#41A317'><b>Status:</b> Downloading... </font><br /><br />";
+        	echo "<font color='#ec9fea'><b>Status:</b> Snatched </font><br /><br />";
         }
         elseif ($sbJSON->{data}->{status} == "Downloaded")
         {
-        	echo "<font color='#41A317'><b>Status:</b> Collected </font><br /><br />";
+        	echo "<font color='#92e49f'><b>Status:</b> Downloaded </font><br /><br />";
         }
         elseif ($sbJSON->{data}->{status} == "Wanted")
         {
         	echo "<font color='#306EFF'><b>Status:</b> Wanted </font><br /><br />";
         }
+        elseif ($sbJSON->{data}->{status} == "Unaired")
+        {
+        	echo "<font color='#f0e3ba'><b>Status:</b> Unaired </font><br /><br />";
+        }
         else
         {
-        	echo "<font color='#F62817'><b>Status:</b> Not Collected </font><br /><br />";
+        	echo "<font color='#8dceed'><b>Status:</b> Skipped </font><br /><br />";
         }
 include 'footer.php';        
 echo "</center>";

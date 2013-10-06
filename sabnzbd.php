@@ -18,13 +18,13 @@ echo "<h1>Download Queue</h1>";
 
 if ($sbJSON->{mb} > "0")
 {
-echo "Timeleft: ".$sbJSON->{timeleft}."<br />";
+echo "<b>Timeleft:</b> ".$sbJSON->{timeleft}."<br />";
 if ($sbJSON->{paused} == "")
 {
 }
 else
 {
-	echo "Downloads Paused: ".$sbJSON->{paused}."<br />";
+	echo "<b>Downloads Paused:</b> ".$sbJSON->{paused}."<br />";
 }
 echo "<b>Queued:</b> ".$sbJSON->{mb}." MB<br />";
 echo "<b>Speed:</b> ".$sbJSON->{kbpersec}." Kbps<br /><br>";

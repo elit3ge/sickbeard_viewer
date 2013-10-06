@@ -75,7 +75,7 @@ else
 		$next_ep = $tvdata->{data}->{next_ep_airdate};
 	}
 // Show Details
-echo "Network: ".$tvdata->{data}->{network}.", Airs: ".$tvdata->{data}->{airs}.", Next Ep: ".$next_ep.", Show Status: ".$tvdata->{data}->{status}."<br><br>";
+echo "<b>Network:</b> ".$tvdata->{data}->{network}.", <b>Airs:</b> ".$tvdata->{data}->{airs}.", <b>Next Ep:</b> ".$next_ep.", <b>Show Status:</b> ".$tvdata->{data}->{status}."<br><br>";
 }
 
 // Run through each feed item
