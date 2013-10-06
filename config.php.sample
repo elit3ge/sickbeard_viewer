@@ -1,5 +1,8 @@
 <?php
 
+// site name
+$site_name = "Site Name";
+
 // sickbeard settings
 $ip = "website or ip:8081";
 $api = "1234";
@@ -22,8 +25,5 @@ $plex_ip = "website or ip:32400";
 $headphones_enabled = "0";
 $headphones_ip = "website or ip:8181";
 $headphones_api = "123";
-
-// site name
-$site_name = "Site Name";
 
 ?>
