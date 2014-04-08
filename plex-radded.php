@@ -1,11 +1,13 @@
 <?php
 
+
 // Settings
+
 include 'config.php';
 include 'header.php';
 include 'plex-header.php';
 
-$url = "http://".$plex_ip."/library/recentlyAdded";
+$url = $plex_ip."/library/recentlyAdded";
 $achxml = simplexml_load_file($url);
 
 echo "<title> Plex Recently Added | ".$site_name."</title>";

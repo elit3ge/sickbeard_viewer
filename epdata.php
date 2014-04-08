@@ -9,8 +9,8 @@ $seasonid = $_GET['seasonid'];
 $epid = $_GET['ep'];
 
 // Define feeds
-$feed = "http://".$ip."/api/".$api."/?cmd=episode&tvdbid=".$showid."&season=".$seasonid."&episode=".$epid;
-$feed2 = "http://".$ip."/api/".$api."/?cmd=show&tvdbid=".$showid;
+$feed = $ip."/api/".$api."/?cmd=episode&tvdbid=".$showid."&season=".$seasonid."&episode=".$epid;
+$feed2 = $ip."/api/".$api."/?cmd=show&tvdbid=".$showid;
 $feed3 = "http://api.trakt.tv/show/episode/summary.json/".$trakt_api."/".$showid."/".$seasonid."/".$epid;
 
 // fetch trakt api
@@ -45,7 +45,7 @@ if ($trakt_enabled == "1")
 else
 {
 	// Display Show Bannger
-	printf("<img src=http://".$ip."/api/".$api."/?cmd=show.getbanner&tvdbid=".$showid."><br><br>");
+	printf("<img src=".$ip."/api/".$api."/?cmd=show.getbanner&tvdbid=".$showid."><br><br>");
 }
 
         // Show Details

@@ -1,13 +1,15 @@
 <?php
 
+
 // Settings
+
 include 'config.php';
 include 'header.php';
 include 'plex-header.php';
 
 $showkey = $_GET['key'];
 
-$url = "http://".$plex_ip."/library/metadata/".$showkey."/children";
+$url = $plex_ip."/library/metadata/".$showkey."/children";
 $achxml = simplexml_load_file($url);
 echo "<title>".$achxml['title2']." | ".$site_name."</title>";
 echo "<h1>".$achxml['title2']."</h1>";

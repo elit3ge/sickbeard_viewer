@@ -4,12 +4,12 @@
 $site_name = "Site Name";
 
 // sickbeard settings
-$ip = "website or ip:8081";
+$ip = "website or ip:8081"; //must include http or https
 $api = "1234";
 
 // sabnzbd settings -- Optional
 $sab_enabled = "0"; //Change the value from 0 to 1 to enable sabnzbd
-$sab_ip = "website or ip:8082";
+$sab_ip = "website or ip:8082"; //must include http or https
 $sab_api = "1234";
 
 // trakt.tv settings -- Optional
@@ -19,11 +19,11 @@ $trakt_api = "1234";
 
 // plex settings -- Optional
 $plex_enabled = "0";
-$plex_ip = "website or ip:32400";
+$plex_ip = "website or ip:32400"; //must include http or https
 
 // headphones settings -- Optional
 $headphones_enabled = "0";
-$headphones_ip = "website or ip:8181";
+$headphones_ip = "website or ip:8181"; //must include http or https
 $headphones_api = "123";
 
 ?>

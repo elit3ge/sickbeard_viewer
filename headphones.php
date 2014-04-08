@@ -5,7 +5,7 @@ echo "<title>Headphones | ".$site_name."</title>";
 
 include 'header.php';
 
-$feed = "http://".$headphones_ip."/api?apikey=".$headphones_api."&cmd=getIndex";
+$feed = $headphones_ip."/api?apikey=".$headphones_api."&cmd=getIndex";
         
 $sbJSON = json_decode(file_get_contents($feed));
 	

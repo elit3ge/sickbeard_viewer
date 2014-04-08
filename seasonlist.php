@@ -8,8 +8,8 @@ include 'header.php';
 $showid = $_GET['showid'];
 
 // Show URL
-    $feed = "http://".$ip."/api/".$api."/?cmd=show.seasonlist&tvdbid=".$showid."&sort=asc";
-    $feed2 = "http://".$ip."/api/".$api."/?cmd=show&tvdbid=".$showid;
+    $feed = $ip."/api/".$api."/?cmd=show.seasonlist&tvdbid=".$showid."&sort=asc";
+    $feed2 = $ip."/api/".$api."/?cmd=show&tvdbid=".$showid;
     $feed3 = "http://api.trakt.tv/show/episode/summary.json/".$trakt_api."/".$showid."/1/1";
 
 // fetch trakt api
@@ -42,7 +42,7 @@ if ($trakt_enabled == "1")
 	if ($trakt->{status} == "failure")
 	{
 		// Display SickBeard Banner as trakt returned an error
-		printf("<img src=http://".$ip."/api/".$api."/?cmd=show.getbanner&tvdbid=".$showid."><br><br>");
+		printf("<img src=".$ip."/api/".$api."/?cmd=show.getbanner&tvdbid=".$showid."><br><br>");
 	}
 	else
 	{
@@ -53,7 +53,7 @@ if ($trakt_enabled == "1")
 else
 {
 	// Display SickBeard Bannger
-	printf("<img src=http://".$ip."/api/".$api."/?cmd=show.getbanner&tvdbid=".$showid."><br><br>");
+	printf("<img src=".$ip."/api/".$api."/?cmd=show.getbanner&tvdbid=".$showid."><br><br>");
 }
 
 if ($trakt_enabled == "1")

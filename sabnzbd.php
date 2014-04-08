@@ -6,7 +6,7 @@ include 'header.php';
 echo "<title>Download Queue | ".$site_name."</title>";
 echo "<center>";
 // Feed URL
-$feed = "http://".$sab_ip."/api?mode=qstatus&output=json&apikey=".$sab_api;
+$feed = $sab_ip."/api?mode=qstatus&output=json&apikey=".$sab_api;
     
 $sbJSON = json_decode(file_get_contents($feed));
 

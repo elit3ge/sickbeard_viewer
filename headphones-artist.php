@@ -5,7 +5,7 @@ include 'header.php';
 
 $artistid = $_GET['id'];
 
-$feed = "http://".$headphones_ip."/api?apikey=".$headphones_api."&cmd=getArtist&id=".$artistid;
+$feed = $headphones_ip."/api?apikey=".$headphones_api."&cmd=getArtist&id=".$artistid;
         
 $sbJSON = json_decode(file_get_contents($feed));
 	

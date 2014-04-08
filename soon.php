@@ -4,8 +4,8 @@
 include 'config.php';
 
 // Feed URL
-$feed = "http://".$ip."/api/".$api."/?cmd=future&sort=date&type=soon";
-$feed2 = "http://".$ip."/api/".$api."/?cmd=future&sort=date&type=today|missed";
+$feed = $ip."/api/".$api."/?cmd=future&sort=date&type=soon";
+$feed2 = $ip."/api/".$api."/?cmd=future&sort=date&type=today|missed";
     
 $sbJSON = json_decode(file_get_contents($feed));
 $sbJSON2 = json_decode(file_get_contents($feed2));
