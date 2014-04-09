@@ -4,6 +4,7 @@
 $site_name = "Site Name";
 
 // sickbeard settings
+$sickbeard_enabled = "1";
 $ip = "website or ip:8081"; //must include http or https
 $api = "1234";
 
