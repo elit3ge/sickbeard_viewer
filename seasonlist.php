@@ -84,11 +84,11 @@ foreach($sbJSON->{data} as $show) {
         // Show Details
         if ($show == '0')
         {
-        	echo "<a href='episode.php?showid=".$showid."&seasonid=".$show."'>Specials </a><br />";
+        	echo "<a href='episode.php?showid=".$showid."&seasonid=".$show."'>Specials</a><br />";
         }
         else
         {
-        	echo "<a href='episode.php?showid=".$showid."&seasonid=".$show."'>Season ".$show." </a><br />";
+        	echo "<a href='episode.php?showid=".$showid."&seasonid=".$show."'>Season ".$show."</a> - ";
         }
     }
 include 'footer.php';
