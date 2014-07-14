@@ -52,7 +52,7 @@ if ($trakt_enabled == "1")
 }
 else
 {
-	// Display SickBeard Bannger
+	// Display SickBeard Banner
 	printf("<img src=".$ip."/api/".$api."/?cmd=show.getbanner&tvdbid=".$showid."><br><br>");
 }
 
