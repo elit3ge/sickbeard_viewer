@@ -11,7 +11,7 @@ $epid = $_GET['ep'];
 // Define feeds
 $feed = $ip."/api/".$api."/?cmd=episode&tvdbid=".$showid."&season=".$seasonid."&episode=".$epid;
 $feed2 = $ip."/api/".$api."/?cmd=show&tvdbid=".$showid;
-$feed3 = "http://api.trakt.tv/show/episode/summary.json/".$trakt_api."/".$showid."/".$seasonid."/".$epid;
+$feed3 = "https://api.trakt.tv/show/episode/summary.json/".$trakt_api."/".$showid."/".$seasonid."/".$epid;
 
 // fetch trakt api
 if ($trakt_enabled == "1")

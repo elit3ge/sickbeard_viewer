@@ -10,7 +10,7 @@ $seasonid = $_GET['seasonid'];
 // Check if username is available, set URL
     $feed = $ip."/api/".$api."/?cmd=show.seasons&tvdbid=".$showid."&season=".$seasonid;
     $feed2 = $ip."/api/".$api."/?cmd=show&tvdbid=".$showid;
-    $feed3 = "http://api.trakt.tv/show/episode/summary.json/".$trakt_api."/".$showid."/1/1";
+    $feed3 = "https://api.trakt.tv/show/episode/summary.json/".$trakt_api."/".$showid."/1/1";
     
 // fetch trakt api
 if ($trakt_enabled == "1")
