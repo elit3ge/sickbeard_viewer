@@ -15,6 +15,8 @@ echo "<center>";
 include 'header.php';
 echo "<h1>Recently Snatched</h1>";
 
+echo "<table style='width:500px'>";
+
 // Run through each feed item
 foreach($sbJSON->{data} as $show) {
 
@@ -22,8 +24,9 @@ foreach($sbJSON->{data} as $show) {
         $newDate = date("l, j F Y g:ia", strtotime($show->{date}));
 
         // Show Details
-        echo "<a href='epdata.php?showid=".$show->{tvdbid}."&seasonid=".$show->{season}."&ep=".$show->{episode}."'>" . $show->{show_name} . ", S" . $show->{season} . " E" . $show->{episode} . "</a> | " .$newDate . "<br />";
+        echo "<tr><td><a href='epdata.php?showid=".$show->{tvdbid}."&seasonid=".$show->{season}."&ep=".$show->{episode}."'>" . $show->{show_name} . ", S" . $show->{season} . " E" . $show->{episode} . "</a></td><td>" .$newDate . "</td></tr>";
 }
+echo '</table>';
 include 'footer.php';
 echo "</center>";
 ?>
