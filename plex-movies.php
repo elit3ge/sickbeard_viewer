@@ -9,7 +9,7 @@ include 'plex-header.php';
 
 echo "<title>PlexMovies | ".$site_name."</title>";
 
-$url = $plex_ip."/library/sections/2/all";
+$url = $plex_ip."/library/sections/".$plex_mov."/all";
 $achxml = simplexml_load_file($url);
 echo "<h1>PlexMovies</h1>";
 foreach($achxml->Video AS $child) {
