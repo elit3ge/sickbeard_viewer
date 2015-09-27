@@ -8,15 +8,15 @@ $sickbeard_enabled = "1";
 $ip = "website or ip:8081"; //must include http or https
 $api = "1234";
 
+// sonarr settings
+$sonarr_enabled = "0"; //Change the value from 0 to 1 to enable sonarr
+$sonarr_ip = "website or ip:8989"; //must include http or https
+$sonarr_api = "1234";
+
 // sabnzbd settings -- Optional
 $sab_enabled = "0"; //Change the value from 0 to 1 to enable sabnzbd
 $sab_ip = "website or ip:8082"; //must include http or https
 $sab_api = "1234";
-
-// trakt.tv settings -- Optional
-// Used to grab alternate images and show info
-$trakt_enabled = "0"; //Change the value from 0 to 1 to enable trakt
-$trakt_api = "1234";
 
 // plex settings -- Optional
 $plex_enabled = "0";

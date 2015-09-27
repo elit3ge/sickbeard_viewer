@@ -22,7 +22,7 @@ if ($sbJSON2->{data}->{today} == "")
 { }
 else
 {
-echo "<u><b>Today</b></u><br><table style='width:500px'>";
+echo "<u><b>Today</b></u><br><table style='width:600px'>";
 }
 
 // Run through each feed item
@@ -36,7 +36,7 @@ echo "<tr><td><a href='seasonlist.php?showid=".$show2->{tvdbid}."'>" . $show2->{
 }
 echo "</table>";
 
-echo "<br><b><u>Later</u></b><br><table style='width:500px'>";
+echo "<br><b><u>Later</u></b><br><table style='width:600px'>";
 foreach($sbJSON->{data}->{soon} as $show) {
 // Only grab shows of episode 1
 
@@ -49,11 +49,11 @@ echo "<tr><td><a href='seasonlist.php?showid=".$show->{tvdbid}."'>".$show->{show
 echo "</table>";
 
 // Remove Today header if no shows
-if ($sbJSON->{data}->{missed} == "")
+if (!empty($sbJSON->{data}->{missed}))
 { }
 else
 {
-echo "<br><u><b>Missed</b></u><br>";
+  echo "<br><b><u>Missed</u></b><br><table style='width:600px'>";
 }
 
 // Run through each feed item
@@ -63,7 +63,7 @@ foreach($sbJSON2->{data}->{missed} as $show3) {
 $newDate3 = date("l, j F Y", strtotime($show3->{airdate}));
 
 // Show Details
-echo "<a href='seasonlist.php?showid=".$show2->{tvdbid}."'>" . $show3->{show_name} . "</a>, S" . $show3->{season} . " E" . $show3->{episode} . " | " .$newDate3 . "<br />";
+echo "<tr><td><a href='seasonlist.php?showid=".$show2->{tvdbid}."'>" . $show3->{show_name} . "</a></td><td>S" . $show3->{season} . "</td><td>E" . $show3->{episode} . "</td><td>" .$newDate3 . "</td></tr>";
 }
-echo "</div>";
+echo "</table>";
 ?>

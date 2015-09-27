@@ -4,6 +4,9 @@
 echo "<link rel='stylesheet' type='text/css' href='style.css' />";
 echo "<div id='site_content'>";
 
+//Set Trakt to 0 as they have moved to API2
+$trakt_enabled = "0";
+
 //start center
 echo "<center>";
 // display title

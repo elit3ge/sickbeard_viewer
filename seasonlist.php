@@ -34,7 +34,7 @@ echo "<title>".$title." | ".$site_name."</title>";
 echo "<center>";
 // What are you!?
 echo "<h1>".$title." Seasons List</h1>";
-echo "<a href='shows.php'>Back</a><br>";
+echo "<a href='shows.php'>Back</a><br><br>";
 
 // trakt.tv banner intragration
 if ($trakt_enabled == "1")
@@ -81,6 +81,7 @@ echo "<b>Network:</b> ".$tvdata->{data}->{network}.", <b>Airs:</b> ".$tvdata->{d
 // Run through each feed item
 foreach($sbJSON->{data} as $show) {
 
+        echo "- ";
         // Show Details
         if ($show == '0')
         {

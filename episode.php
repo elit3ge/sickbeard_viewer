@@ -34,7 +34,7 @@ echo "<center>";
 
 // What are you!?
 echo "<h1>".$title." Season ".$seasonid."</h1>";
-echo "<a href='seasonlist.php?showid=".$showid."'>Back</a><br>";
+echo "<a href='seasonlist.php?showid=".$showid."'>Back</a><br><br>";
 
 // trakt.tv banner intragration
 if ($trakt_enabled == "1")
@@ -43,7 +43,7 @@ if ($trakt_enabled == "1")
 }
 else
 {
-	// Display Show Bannger
+	// Display Show Banner
 	printf("<img src=".$ip."/api/".$api."/?cmd=show.getbanner&tvdbid=".$showid."><br><br>");
 }
 
@@ -57,29 +57,30 @@ foreach($sbJSON->{data} as $show) {
         echo "<a href='epdata.php?showid=".$showid."&seasonid=".$seasonid."&ep=".$counter."'><b>Episode:</b> " . $counter . "</a><br />";
         echo "<b>Name:</b> " . $show->{name} . "<br />";
         echo "<b>Aired:</b> " . $show->{airdate} . "<br />";
+        echo "<b>Quality:</b> " . $show->{quality} . "<br />";
         if ($show->{status} == "Archived")
         {
-        	echo "<font color='#41A317'><b>Status:</b> Archived </font><br /><br />";
+        	echo "<b>Status:</b><font color='#41A317'> Archived </font><br /><br />";
         }
         elseif ($show->{status} == "Snatched")
         {
-        	echo "<font color='#ec9fea'><b>Status:</b> Snatched </font><br /><br />";
+        	echo "<b>Status:</b><font color='#ec9fea'> Snatched </font><br /><br />";
         }
         elseif ($show->{status} == "Downloaded")
         {
-        	echo "<font color='#92e49f'><b>Status:</b> Downloaded </font><br /><br />";
+        	echo "<b>Status:</b><font color='#92e49f'> Downloaded </font><br /><br />";
         }
         elseif ($show->{status} == "Wanted")
         {
-        	echo "<font color='#306EFF'><b>Status:</b> Wanted </font><br /><br />";
+        	echo "<b>Status:</b><font color='#306EFF'> Wanted </font><br /><br />";
         }
         elseif ($show->{status} == "Unaired")
         {
-        	echo "<font color='#f0e3ba'><b>Status:</b> Unaired </font><br /><br />";
+        	echo "<b>Status:</b><font color='#f0e3ba'> Unaired </font><br /><br />";
         }
         else
         {
-        	echo "<font color='#8dceed'><b>Status:</b> Skipped </font><br /><br />";
+        	echo "<b>Status:</b><font color='#8dceed'> Skipped </font><br /><br />";
         }
 
         $counter = $counter + "1";
