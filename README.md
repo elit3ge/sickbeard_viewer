@@ -9,4 +9,4 @@ PHP website to share your shows and episodes with friends and family.
 
 Now your ready to go! Just navigate your browser to the location you placed your files.
 
-Note: For this to work properly outside your network, you must forward your sickbeard and sabnzbd ports.
+Note: For this to work properly outside your network, you must forward your sickbeard/sickrage and sabnzbd ports.
