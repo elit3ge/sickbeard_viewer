@@ -3,6 +3,8 @@
 // site name
 $site_name = "Site Name";
 
+//Apps
+
 // sickbeard settings
 $sickbeard_enabled = "1";
 $ip = "website or ip:8081"; //must include http or https
@@ -12,11 +14,6 @@ $api = "1234";
 $sonarr_enabled = "0"; //Change the value from 0 to 1 to enable sonarr
 $sonarr_ip = "website or ip:8989"; //must include http or https
 $sonarr_api = "1234";
-
-// sabnzbd settings -- Optional
-$sab_enabled = "0"; //Change the value from 0 to 1 to enable sabnzbd
-$sab_ip = "website or ip:8082"; //must include http or https
-$sab_api = "1234";
 
 // plex settings -- Optional
 $plex_enabled = "0";
@@ -29,4 +26,16 @@ $headphones_enabled = "0";
 $headphones_ip = "website or ip:8181"; //must include http or https
 $headphones_api = "123";
 
+// Downloaders
+
+// sabnzbd settings -- Optional
+$sab_enabled = "0"; //Change the value from 0 to 1 to enable sabnzbd
+$sab_ip = "website or ip:8082"; //must include http or https
+$sab_api = "1234";
+
+// nzbget settings -- Optional
+$nzbget_enable = "0"; //Change the value from 0 to 1 to enable sabnzbd
+$nzbget_ip = "website or ip:8082"; //must include http or https
+$nzbget_username = "username";
+$nzbget_password = "password";
 ?>
