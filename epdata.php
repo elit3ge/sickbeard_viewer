@@ -35,7 +35,7 @@ echo "<center>";
 
 // What are you!?
 echo "<h1>".$title." Season ".$seasonid." Episode ".$epid."</h1>";
-echo "<a href='episode.php?showid=".$showid."&seasonid=".$seasonid."'>Back</a><br>";
+echo "<a href='episode.php?showid=".$showid."&seasonid=".$seasonid."'>Back</a><br><br>";
 
 // trakt.tv banner intragration
 if ($trakt_enabled == "1")

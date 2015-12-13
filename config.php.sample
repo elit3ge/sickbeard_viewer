@@ -34,8 +34,9 @@ $sab_ip = "website or ip:8082"; //must include http or https
 $sab_api = "1234";
 
 // nzbget settings -- Optional
-$nzbget_enable = "0"; //Change the value from 0 to 1 to enable sabnzbd
-$nzbget_ip = "website or ip:8082"; //must include http or https
+$nzbget_enabled = "0"; //Change the value from 0 to 1 to enable sabnzbd
+$nzbget_ip = "website or ip:6789"; //must not include http or https
+$nzbget_ssl = "0"; //Change to 1 for https
 $nzbget_username = "username";
 $nzbget_password = "password";
 ?>

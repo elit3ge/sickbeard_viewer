@@ -14,8 +14,8 @@ $sbJSON = json_decode(file_get_contents($feed));
 echo "<center>";
 include 'header.php';
 echo "<h1>Recently Snatched</h1>";
-
-echo "<table style='width:500px'>";
+echo "<br>";
+echo "<table style='width:auto'>";
 
 // Run through each feed item
 foreach($sbJSON->{data} as $show) {

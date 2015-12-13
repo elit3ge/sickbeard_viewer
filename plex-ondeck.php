@@ -5,7 +5,9 @@
 
 include 'config.php';
 include 'header.php';
+echo "<center>";
 include 'plex-header.php';
+echo "</center>";
 
 echo "<title>PlexShows | ".$site_name."</title>";
 
