@@ -4,14 +4,16 @@
 
 include 'config.php';
 include 'header.php';
+echo "<center>";
 include 'plex-header.php';
+echo "</center>";
 
 $epid = $_GET['epid'];
 
 $url = $plex_ip."/library/metadata/".$epid."/children";
 $achxml = simplexml_load_file($url);
 echo "<title>".$achxml['title1']." | ".$achxml['title2']." | ".$site_name."</title>";
-echo "<h1>".$achxml['title1']." | ".$achxml['title2']."</h1>";
+echo "<h1>".$achxml['title1']." | ".$achxml['title2']."</h1><br>";
 foreach($achxml AS $child) {
 	//echo "<h1>".$child['title']."</h1>";
 	echo "<b>Episode:</b> ".$child['index']."<br>";
