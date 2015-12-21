@@ -74,6 +74,7 @@ echo "<tr><td><a href='seasonlist.php?showid=".$show2->{tvdbid}."'>" . $show3->{
 }
 echo "</table>";
 echo "</center>";
+include 'footer.php';
 
 } else {echo '<br>Sickbeard is Disabled in Config. Please Enable it to see the Airing Soon items.';}
 
