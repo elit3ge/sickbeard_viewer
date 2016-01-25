@@ -8,16 +8,15 @@ include 'header.php';
 $showid = $_GET['showid'];
 
 // Show URL
-    $feed = $ip."/api/".$api."/?cmd=show.seasonlist&tvdbid=".$showid."&sort=asc";
-    $feed2 = $ip."/api/".$api."/?cmd=show&tvdbid=".$showid;
-    $feed3 = "https://api.trakt.tv/show/episode/summary.json/".$trakt_api."/".$showid."/1/1";
+$feed = $ip."/api/".$api."/?cmd=show.seasonlist&tvdbid=".$showid."&sort=asc";
+$feed2 = $ip."/api/".$api."/?cmd=show&tvdbid=".$showid;
+$feed3 = "https://api.trakt.tv/show/episode/summary.json/".$trakt_api."/".$showid."/1/1";
 
 // fetch trakt api
 if ($trakt_enabled == "1")
 {
 	$sbJSON = json_decode(file_get_contents($feed));
 	$tvdata = json_decode(file_get_contents($feed2));
-	
 	$trakt = json_decode(file_get_contents($feed3));
 }
 else
@@ -32,6 +31,7 @@ $title = $tvdata->{data}->{show_name};
 //Display Browser Title
 echo "<title>".$title." | ".$site_name."</title>";
 echo "<center>";
+
 // What are you!?
 echo "<h1>".$title." Seasons List</h1>";
 echo "<a href='shows.php'>Back</a><br><br>";
@@ -46,7 +46,7 @@ if ($trakt_enabled == "1")
 	}
 	else
 	{
-		// Display trakt.tv Bannger
+		// Display trakt.tv Banner
 		printf("<img src=".$trakt->{show}->{images}->{banner}."><br><br>");
 	}
 }
@@ -75,7 +75,7 @@ else
 		$next_ep = $tvdata->{data}->{next_ep_airdate};
 	}
 // Show Details
-echo "<b>Network:</b> ".$tvdata->{data}->{network}.", <b>Airs:</b> ".$tvdata->{data}->{airs}.", <b>Next Ep:</b> ".$next_ep.", <b>Show Status:</b> ".$tvdata->{data}->{status}."<br><br>";
+echo "<b>Network:</b> ".$tvdata->{data}->{network}."<br> <b>Airs:</b> ".$tvdata->{data}->{airs}."<br> <b>Next Ep:</b> ".$next_ep."<br> <b>Show Status:</b> ".$tvdata->{data}->{status}."<br><br>";
 }
 
 // Run through each feed item
@@ -85,7 +85,7 @@ foreach($sbJSON->{data} as $show) {
         // Show Details
         if ($show == '0')
         {
-        	echo "<a href='episode.php?showid=".$showid."&seasonid=".$show."'>Specials</a><br />";
+        	echo "<a href='episode.php?showid=".$showid."&seasonid=".$show."'>Specials</a> -<br />";
         }
         else
         {

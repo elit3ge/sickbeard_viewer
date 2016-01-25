@@ -33,7 +33,7 @@ echo "<title>".$title." | Season ".$seasonid." | ".$site_name."</title>";
 echo "<center>";
 
 // What are you!?
-echo "<h1>".$title." Season ".$seasonid."</h1>";
+echo "<h1>".$title." - Season ".$seasonid."</h1>";
 echo "<a href='seasonlist.php?showid=".$showid."'>Back</a><br><br>";
 
 // trakt.tv banner intragration

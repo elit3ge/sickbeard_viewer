@@ -1,11 +1,12 @@
 <?php
 
-
 // Settings
 
 include 'config.php';
 include 'header.php';
+echo "<center>";
 include 'plex-header.php';
+echo "</center>";
 
 echo "<title>PlexShows | ".$site_name."</title>";
 
@@ -17,10 +18,10 @@ echo '<table>';
 foreach($achxml->Video AS $child) {
     //echo "<a href='plex-shows-season.php?key=".$child['ratingKey']."'>".$child['title']."</a><br>";
     echo '<tr>';
-    echo '<td valign="middle">';
+    echo '<td align="center">';
     echo printf("<img height='350' src=".$plex_ip.$child['art']."");
     echo '</td>';
-    echo '<td valign="middle">';
+    echo '<td align="center">';
     echo $child['grandparentTitle'];
     echo ' - ';
     echo $child['title'];
