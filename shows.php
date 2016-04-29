@@ -2,6 +2,8 @@
 <?php
 
 include 'config.php';
+
+// Set Title
 echo "<title>TV Shows | ".$site_name."</title>";
 
 include 'header.php';
@@ -14,12 +16,22 @@ $stats = json_decode(file_get_contents($feed2));
 
 echo "<h1>Shows</h1>";
 echo "<br>";
+echo '<table>';
 
 foreach ($sbJSON['data'] as $key => $values)
 	{
-    	echo '<a href="seasonlist.php?showid=' . $values['tvdbid'] . '">' . $key . '</a><br />';
+			echo '<tr>';
+				echo '<td>';
+					echo '<a href="seasonlist.php?showid=' . $values['tvdbid'] . '">' . $key . '</a>';
+				echo '</td>';
+				echo '<td>';
+					echo $values['status'];
+				echo '</td>';
+			echo '</tr>';
+
 	}
 
+echo '</table>';
 echo "<br>Eps Downloaded: ".$stats->{data}->{ep_downloaded}." of ".$stats->{data}->{ep_total}." == Shows Active: ".$stats->{data}->{shows_active}." of ".$stats->{data}->{shows_total};
 include 'footer.php';
 ?>
