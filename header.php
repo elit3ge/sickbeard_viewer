@@ -35,6 +35,8 @@ echo "<body>";
 					echo "<li><a href='plex-ondeck.php'>Plex</a></li>"; } else {}
 				if ($headphones_enabled == "1") {
 					echo "<li><a href='headphones.php'>Headphones</a></li>"; } else {}
+				if ($couchpotato_enabled == "1") {
+					echo "<li><a href='couchpotato.php'>Couchpotato</a></li>"; } else {}
 			echo "</ul>";
 			echo "</div>";
 		echo "</header>";

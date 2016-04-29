@@ -27,6 +27,11 @@ $headphones_enabled = "0";
 $headphones_ip = "website or ip:8181"; //must include http or https
 $headphones_api = "123";
 
+// couchpotato settings -- Optional
+$couchpotato_enabled = "0";
+$couchpotato_ip = "external website or ip:5050"; //must include http or https
+$couchpotato_api = "123";
+
 // Downloaders
 
 // sabnzbd settings -- Optional
