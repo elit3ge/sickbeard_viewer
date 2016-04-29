@@ -5,10 +5,11 @@ $site_name = "Site Name";
 
 //Apps
 
-// sickbeard settings
+// sickbeard/sickrage settings
 $sickbeard_enabled = "1";
 $ip = "website or ip:8081"; //must include http or https
 $api = "1234";
+$sick_grab_limit = "50"; //Limits the amount of recently snatched items.
 
 // sonarr settings
 $sonarr_enabled = "0"; //Change the value from 0 to 1 to enable sonarr
