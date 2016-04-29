@@ -33,8 +33,8 @@ echo "<title>".$title." | ".$site_name."</title>";
 echo "<center>";
 
 // What are you!?
-echo "<h1>".$title." Seasons List</h1>";
-echo "<a href='shows.php'>Back</a><br><br>";
+echo "<h1>".$title." Seasons List</h1><br>";
+echo "<button><a href='shows.php'>Back</a></button><br><br>";
 
 // trakt.tv banner intragration
 if ($trakt_enabled == "1")
@@ -85,11 +85,11 @@ foreach($sbJSON->{data} as $show) {
         // Show Details
         if ($show == '0')
         {
-        	echo "<a href='episode.php?showid=".$showid."&seasonid=".$show."'>Specials</a> -<br />";
+        	echo "<button><a href='episode.php?showid=".$showid."&seasonid=".$show."'>Specials</a></button> -<br />";
         }
         else
         {
-        	echo "<a href='episode.php?showid=".$showid."&seasonid=".$show."'>Season ".$show."</a> - ";
+        	echo "<button><a href='episode.php?showid=".$showid."&seasonid=".$show."'>Season ".$show."</a></button> ";
         }
     }
 include 'footer.php';

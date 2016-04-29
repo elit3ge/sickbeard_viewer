@@ -33,8 +33,8 @@ echo "<title>".$title." | Season ".$seasonid." | ".$site_name."</title>";
 echo "<center>";
 
 // What are you!?
-echo "<h1>".$title." - Season ".$seasonid."</h1>";
-echo "<a href='seasonlist.php?showid=".$showid."'>Back</a><br><br>";
+echo "<h1>".$title." - Season ".$seasonid."</h1><br>";
+echo "<button><a href='seasonlist.php?showid=".$showid."'>Back</a></button><br><br>";
 
 // trakt.tv banner intragration
 if ($trakt_enabled == "1")
@@ -54,7 +54,7 @@ $counter = "1";
 foreach($sbJSON->{data} as $show) {
 
         // Show Details
-        echo "<a href='epdata.php?showid=".$showid."&seasonid=".$seasonid."&ep=".$counter."'><b>Episode:</b> " . $counter . "</a><br />";
+        echo "<button><a href='epdata.php?showid=".$showid."&seasonid=".$seasonid."&ep=".$counter."'><b>Episode:</b> " . $counter . "</a></button><br />";
         echo "<b>Name:</b> " . $show->{name} . "<br />";
         echo "<b>Aired:</b> " . $show->{airdate} . "<br />";
         echo "<b>Quality:</b> " . $show->{quality} . "<br />";
