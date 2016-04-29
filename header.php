@@ -11,6 +11,7 @@ echo "<head>";
 	echo "<link rel='stylesheet' href='css/style.css'>";
 	echo "<link rel='stylesheet' href='css/font-awesome.min.css'>";
 	echo "<script src='js/libs/modernizr-2.8.3.min.js'></script>";
+	echo "<!-- Theme borrowed from the HeadPhones project -->";
 echo "</head>";
 echo "<body>";
 	echo "<div id='container'>";
