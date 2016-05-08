@@ -22,9 +22,14 @@ foreach ($sbJSON['data'] as $key => $values)
 	{
 			echo '<tr>';
 				echo '<td>';
+					echo '<a href="seasonlist.php?showid=' . $values['tvdbid'] . '">';
+					printf("<img width='300' src=".$ip."/api/".$api."/?cmd=show.getbanner&tvdbid=".$values['tvdbid'].">");
+					echo '</a>';
+				echo '</td>';	
+				echo '<td align="center" style="vertical-align:middle">';
 					echo '<a href="seasonlist.php?showid=' . $values['tvdbid'] . '">' . $key . '</a>';
 				echo '</td>';
-				echo '<td>';
+				echo '<td style="vertical-align:middle">';
 					echo $values['status'];
 				echo '</td>';
 			echo '</tr>';
