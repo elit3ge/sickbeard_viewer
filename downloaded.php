@@ -4,9 +4,8 @@
 include 'config.php';
 echo "<title>Recently Snatched | ".$site_name."</title>";
 
-// Check if username is available, set URL
-// This probably isn't necessary
-    $feed = $ip."/api/".$api."?cmd=history&type=snatched&limit=25";
+// Set URL
+$feed = $ip."/api/".$api."?cmd=history&type=snatched&limit=".$sick_grab_limit;
     
 $sbJSON = json_decode(file_get_contents($feed));
 

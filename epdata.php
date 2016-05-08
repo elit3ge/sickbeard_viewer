@@ -34,8 +34,8 @@ echo "<title>".$title." | Season ".$seasonid." | Episode ".$epid." | ".$site_nam
 echo "<center>";
 
 // What are you!?
-echo "<h1>".$title." - Season ".$seasonid." - Episode ".$epid."</h1>";
-echo "<a href='episode.php?showid=".$showid."&seasonid=".$seasonid."'>Back</a><br><br>";
+echo "<h1>".$title." - Season ".$seasonid." - Episode ".$epid."</h1><br>";
+echo "<button><a href='episode.php?showid=".$showid."&seasonid=".$seasonid."'>Back</a></button><br><br>";
 
 // trakt.tv banner intragration
 if ($trakt_enabled == "1")
@@ -63,7 +63,8 @@ else
         echo "<b>Description:</b> " . $sbJSON->{data}->{description} . "<br><br>";
         echo "<b>Size:</b> " . $sbJSON->{data}->{file_size_human} . "<br />";
         echo "<b>Aired:</b> " . $sbJSON->{data}->{airdate} . "<br />";
-        echo "<b>Quality:</b> " . $sbJSON->{data}->{quality} . "<br />";
+        echo "<b>Quality:</b> " . $sbJSON->{data}->{quality} . " - Size: " . round($sbJSON->{data}->{file_size}/1024/1024,2) . " MB<br />";
+
         if ($sbJSON->{data}->{status} == "Archived")
         {
         	echo "<b>Status:</b><font color='#41A317'> Archived </font><br /><br />";
