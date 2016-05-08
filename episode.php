@@ -57,7 +57,7 @@ foreach($sbJSON->{data} as $show) {
         echo "<button><a href='epdata.php?showid=".$showid."&seasonid=".$seasonid."&ep=".$counter."'><b>Episode:</b> " . $counter . "</a></button><br />";
         echo "<b>Name:</b> " . $show->{name} . "<br />";
         echo "<b>Aired:</b> " . $show->{airdate} . "<br />";
-        echo "<b>Quality:</b> " . $show->{quality} . "<br />";
+        echo "<b>Quality:</b> " . $show->{quality} . " - Size: " . round($show->{file_size}/1024/1024,2) . " MB<br />";
         if ($show->{status} == "Archived")
         {
         	echo "<b>Status:</b><font color='#41A317'> Archived </font><br /><br />";
