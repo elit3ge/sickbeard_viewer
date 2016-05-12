@@ -75,7 +75,9 @@ else
 		$next_ep = $tvdata->{data}->{next_ep_airdate};
 	}
 // Show Details
-echo "<b>Network:</b> ".$tvdata->{data}->{network}."<br> <b>Airs:</b> ".$tvdata->{data}->{airs}."<br> <b>Next Ep:</b> ".$next_ep."<br> <b>Show Status:</b> ".$tvdata->{data}->{status}."<br><br>";
+echo "<b>Network:</b> "; //$tvdata->{data}->{network}
+printf("<img src=".$ip."/api/".$api."/?cmd=show.getnetworklogo&indexerid=".$showid.">");
+echo "<br> <b>Airs:</b> ".$tvdata->{data}->{airs}."<br> <b>Next Ep:</b> ".$next_ep."<br> <b>Show Status:</b> ".$tvdata->{data}->{status}."<br><br>";
 }
 
 // Run through each feed item
