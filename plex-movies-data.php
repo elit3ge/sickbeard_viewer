@@ -20,7 +20,7 @@ foreach($achxml->Video AS $child) {
     echo "<b>Studio:</b> ".$child['studio']."<br>";
    	echo "<b>Bitrate:</b> ".$child->Media['bitrate']." | <b>Width:</b> ".$child->Media['width']." | <b>Height:</b> ".$child->Media['height']." | <b>AudioChannels:</b> ".$child->Media['audioChannels']." | <b>AudioCodec:</b> ".$child->Media['audioCodec']." | <b>VideoCodec:</b> ".$child->Media['videoCodec']." | <b>VideoResolution:</b> ".$child->Media['videoResolution']." | <b>VideoFrameRate:</b> ".$child->Media['videoFrameRate']."<br>";
     echo "<b>File Location:</b> ".$child->Media->Part['file']."<br><br>";
-   	printf("<img src=".$plex_ip.$child['thumb']."><br><br>");
+   	printf("<img src=".$plex_ip.$child['thumb'].'?X-Plex-Token='.$plex_token."><br><br>");
 
 }
 

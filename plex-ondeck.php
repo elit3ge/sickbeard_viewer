@@ -19,9 +19,9 @@ foreach($achxml->Video AS $child) {
     //echo "<a href='plex-shows-season.php?key=".$child['ratingKey']."'>".$child['title']."</a><br>";
     echo '<tr>';
     echo '<td align="center">';
-    echo printf("<img height='350' src=".$plex_ip.$child['art']."");
+    echo printf("<img height='350' src=".$plex_ip.$child['art'].'?X-Plex-Token='.$plex_token.">");
     echo '</td>';
-    echo '<td align="center">';
+    echo '<td align="center" style="vertical-align:middle">';
     echo $child['grandparentTitle'];
     echo ' - ';
     echo $child['title'];
