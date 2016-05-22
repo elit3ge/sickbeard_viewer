@@ -59,7 +59,7 @@ foreach($sbJSON->{data} as $show) {
         echo "<b>Aired:</b> " . $show->{airdate} . "<br />";
 		echo "<b>Quality:</b> ";
 		
-		if ($show->{quality} == "SD TV")
+		if ($show->{quality} == "SDTV")
 		{
 			printf("<img src='images/SDTV.png'>");
 		}

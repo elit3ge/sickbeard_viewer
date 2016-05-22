@@ -65,7 +65,7 @@ else
         echo "<b>Aired:</b> " . $sbJSON->{data}->{airdate} . "<br />";
 		echo "<b>Quality:</b> ";
 		
-		if ($sbJSON->{data}->{quality} == "SD TV")
+		if ($sbJSON->{data}->{quality} == "SDTV")
 		{
 			printf("<img src='images/SDTV.png'>");
 		}
