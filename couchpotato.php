@@ -24,7 +24,7 @@ foreach ($sbJSON['movies'] as $key => $values)
 				echo '<td>';
 				//echo $values['title'];
 					//echo '<a href="seasonlist.php?showid=' . $key->{titles}->{imdb} . '">' . $values['title'] . '</a>';
-					echo '<a href="#">' . $values['title'] . '</a>';
+					echo $values['title'];
 				echo '</td>';
 				echo '<td>';
 					echo $values['status'];
