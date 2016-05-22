@@ -57,7 +57,7 @@ foreach($sbJSON->{data} as $show) {
         echo "<button><a href='epdata.php?showid=".$showid."&seasonid=".$seasonid."&ep=".$counter."'><b>Episode:</b> " . $counter . "</a></button><br />";
         echo "<b>Name:</b> " . $show->{name} . "<br />";
         echo "<b>Aired:</b> " . $show->{airdate} . "<br />";
-		echo "<b>Quality:</b> " . $show->{quality};
+		echo "<b>Quality:</b> ";
 		
 		if ($show->{quality} == "SD TV")
 		{
@@ -71,6 +71,10 @@ foreach($sbJSON->{data} as $show) {
 		{
 			printf("<img src='images/720TV.png'>");
 		}
+		elseif ($show->{quality} == "720p WEB-DL")
+		{
+			printf("<img src='images/720DL.png'>");
+		}
 		elseif ($show->{quality} == "1080p HDTV")
 		{
 			printf("<img src='images/1080TV.png'>");
@@ -81,7 +85,8 @@ foreach($sbJSON->{data} as $show) {
 		}
 		else
 		{
-			printf("<img src='images/unknown.png'>");
+			//printf("<img src='images/unknown.png'>");
+			echo $show->{quality};
 		}
 		
 		echo " - Size: " . round($show->{file_size}/1024/1024,2) . " MB<br />";

@@ -63,7 +63,39 @@ else
         echo "<b>Description:</b> " . $sbJSON->{data}->{description} . "<br><br>";
         echo "<b>Size:</b> " . $sbJSON->{data}->{file_size_human} . "<br />";
         echo "<b>Aired:</b> " . $sbJSON->{data}->{airdate} . "<br />";
-        echo "<b>Quality:</b> " . $sbJSON->{data}->{quality} . " - Size: " . round($sbJSON->{data}->{file_size}/1024/1024,2) . " MB<br />";
+		echo "<b>Quality:</b> ";
+		
+		if ($sbJSON->{data}->{quality} == "SD TV")
+		{
+			printf("<img src='images/SDTV.png'>");
+		}
+		elseif ($sbJSON->{data}->{quality} == "SD DVD")
+		{
+			printf("<img src='images/SDDVD.png'>");
+		}
+		elseif ($sbJSON->{data}->{quality} == "720p HDTV")
+		{
+			printf("<img src='images/720TV.png'>");
+		}
+		elseif ($sbJSON->{data}->{quality} == "720p WEB-DL")
+		{
+			printf("<img src='images/720DL.png'>");
+		}
+		elseif ($sbJSON->{data}->{quality} == "1080p HDTV")
+		{
+			printf("<img src='images/1080TV.png'>");
+		}
+		elseif ($sbJSON->{data}->{quality} == "1080p WEB-DL")
+		{
+			printf("<img src='images/1080DL.png'>");
+		}
+		else
+		{
+			//printf("<img src='images/unknown.png'>");
+			echo $sbJSON->{data}->{quality};
+		}
+		
+		echo " - Size: " . round($sbJSON->{data}->{file_size}/1024/1024,2) . " MB<br />";
 
         if ($sbJSON->{data}->{status} == "Archived")
         {
