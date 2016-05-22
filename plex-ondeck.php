@@ -10,7 +10,7 @@ echo "</center>";
 
 echo "<title>PlexShows | ".$site_name."</title>";
 
-$url = $plex_ip."/library/onDeck";
+$url = $plex_ip."/library/onDeck?X-Plex-Token=".$plex_token;
 $achxml = simplexml_load_file($url);
 echo "<h1>PlexOnDeck</h1>";
 

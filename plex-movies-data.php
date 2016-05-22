@@ -7,7 +7,7 @@ include 'plex-header.php';
 
 $movieid = $_GET['movieid'];
 
-$url = $plex_ip."/library/metadata/".$movieid;
+$url = $plex_ip."/library/metadata/".$movieid."?X-Plex-Token=".$plex_token;
 $achxml = simplexml_load_file($url);
 echo "<title>".$achxml->Video['title']." | ".$site_name."</title>";
 foreach($achxml->Video AS $child) {

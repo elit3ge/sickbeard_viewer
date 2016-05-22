@@ -21,6 +21,7 @@ $plex_enabled = "0";
 $plex_ip = "website or ip:32400"; //must include http or https
 $plex_mov = "1"; //Select Section for Movies
 $plex_tv = "2"; //Select Section for TV Shows
+$plex_token = "0";
 
 // headphones settings -- Optional
 $headphones_enabled = "0";

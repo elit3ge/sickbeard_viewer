@@ -8,7 +8,7 @@ echo "<center>";
 include 'plex-header.php';
 echo "</center>";
 
-$url = $plex_ip."/library/recentlyAdded";
+$url = $plex_ip."/library/recentlyAdded?X-Plex-Token=".$plex_token;
 $achxml = simplexml_load_file($url);
 
 echo "<title> Plex Recently Added | ".$site_name."</title>";

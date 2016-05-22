@@ -9,7 +9,7 @@ include 'plex-header.php';
 
 $showkey = $_GET['key'];
 
-$url = $plex_ip."/library/metadata/".$showkey."/children";
+$url = $plex_ip."/library/metadata/".$showkey."/children?X-Plex-Token=".$plex_token;
 $achxml = simplexml_load_file($url);
 echo "<title>".$achxml['title2']." | ".$site_name."</title>";
 echo "<h1>".$achxml['title2']."</h1><br>";

@@ -9,7 +9,7 @@ include 'plex-header.php';
 
 echo "<title>PlexShows | ".$site_name."</title>";
 
-$url = $plex_ip."/library/sections/".$plex_tv."/all";
+$url = $plex_ip."/library/sections/".$plex_tv."/all?X-Plex-Token=".$plex_token;
 $achxml = simplexml_load_file($url);
 echo "<h1>PlexShows</h1><br>";
 foreach($achxml->Directory AS $child) {

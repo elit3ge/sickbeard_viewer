@@ -10,7 +10,7 @@ echo "</center>";
 
 $epid = $_GET['epid'];
 
-$url = $plex_ip."/library/metadata/".$epid."/children";
+$url = $plex_ip."/library/metadata/".$epid."/children?X-Plex-Token=".$plex_token;
 $achxml = simplexml_load_file($url);
 echo "<title>".$achxml['title1']." | ".$achxml['title2']." | ".$site_name."</title>";
 echo "<h1>".$achxml['title1']." | ".$achxml['title2']."</h1><br>";
