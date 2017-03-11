@@ -27,7 +27,19 @@ foreach ($sbJSON['movies'] as $key => $values)
 					echo $values['title'];
 				echo '</td>';
 				echo '<td>';
-					echo $values['status'];
+				if ($values['status'] == "done")
+					{
+						echo "<font color='#41A317'>";
+						echo $values['status'];
+						echo "</font>";
+					}
+					else
+					{
+						echo "<font color='#EE0000'>";
+						echo $values['status'];
+						echo "</font>";
+					}
+					//echo $values['status'];
 				echo '</td>';
 			echo '</tr>';
 
