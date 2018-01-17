@@ -29,7 +29,7 @@ else
 // Grab Show Title
 $title = $tvdata->{data}->{show_name};
 
-//Display Browser Title
+// Display Browser Title
 echo "<title>".$title." | Season ".$seasonid." | Episode ".$epid." | ".$site_name."</title>";
 echo "<center>";
 

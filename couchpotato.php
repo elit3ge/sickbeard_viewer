@@ -21,25 +21,28 @@ foreach ($sbJSON['movies'] as $key => $values)
 
 	{
 			echo '<tr>';
-				echo '<td>';
-				//echo $values['title'];
-					//echo '<a href="seasonlist.php?showid=' . $key->{titles}->{imdb} . '">' . $values['title'] . '</a>';
-					echo $values['title'];
+				echo '<td align="middle">';
+					echo '<a href="http://www.imdb.com/title/' . $values['identifiers']['imdb'] . '" target="_blank">';
+					printf("<img width='154' height='231' src=".$values['info']['images']['poster']['0'].">");
+					echo '</a>';
 				echo '</td>';
-				echo '<td>';
-				if ($values['status'] == "done")
-					{
-						echo "<font color='#41A317'>";
-						echo $values['status'];
-						echo "</font>";
-					}
-					else
-					{
-						echo "<font color='#EE0000'>";
-						echo $values['status'];
-						echo "</font>";
-					}
-					//echo $values['status'];
+				echo '<td align="middle">';
+					echo '<a href="http://www.imdb.com/title/' . $values['identifiers']['imdb'] . '" target="_blank">' . $values['title'] . '</a>';
+				echo '</td>';
+				echo '<td align="middle">';
+					if ($values['status'] == "done")
+						{
+							echo "<font color='#41A317'>";
+							echo "Complete";
+							echo "</font>";
+						}
+						else
+						{
+							echo "<font color='#EE0000'>";
+							echo "Incomplete";
+							echo "</font>";
+						}
+						//echo $values['status'];
 				echo '</td>';
 			echo '</tr>';
 
